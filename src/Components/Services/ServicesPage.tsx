@@ -20,6 +20,7 @@ import ServiceLogo from '../../assets/spray-bottle.svg'
 
 import Edit from '../../assets/edit/delete/editwhite.svg'
 import { timers } from 'jquery';
+import '../Services/Services.css'
 
 type MyState = {
     collapseID: string,
@@ -146,9 +147,9 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
             backgroundColor: 'transparent', 
             color: 'white', 
             fontWeight: 'bold', 
-            fontSize: '1.2rem',
+            fontSize: '20px',
             textShadow: '1px 1px 1px black',
-            borderColor: 'transparent'
+            borderColor: 'transparent',
         }
 
         const iconStyles = {
@@ -160,6 +161,9 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
             width:'3%',
             marginTop:'3%',
             marginBottom:'3%'
+        }
+        const collapse ={
+            maxHeight: '50%'
         }
 
 
@@ -215,7 +219,7 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                                 editImg2: ''
                             })
                         }}>
-                            <textarea  defaultValue={this.state.servicesText} style={{fontSize:'1rem',marginLeft:'20%',marginRight:'20%',marginTop: '1%',textAlign:'center',fontSize:'2.2rem', paddingTop:'3%', color:''}}
+                            <textarea  defaultValue={this.state.servicesText} style={{marginLeft:'20%',marginRight:'20%',marginTop: '1%',textAlign:'center',fontSize:'2.2rem', paddingTop:'3%', color:''}}
                             onChange={(e) => {
                                 this.setState({
                                     setServicesText: e.target.value
@@ -245,7 +249,7 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                                     editImg3: ''
                                 })
                             }}>
-                                <textarea  defaultValue={this.state.servicesText2} style={{fontSize: '1.1rem', marginLeft:'20%',marginRight:'20%',marginTop: '1%',textAlign:'center',fontSize:'2.2rem', paddingTop:'3%', color:''}}
+                                <textarea  defaultValue={this.state.servicesText2} style={{marginLeft:'20%',marginRight:'20%',marginTop: '1%',textAlign:'center',fontSize:'2.2rem', paddingTop:'3%', color:''}}
                                 onChange={(e) => {
                                     this.setState({
                                         setServicesText2: e.target.value
@@ -296,17 +300,21 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                             <MDBContainer>
                                 <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px' }}>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Back kitchen<MDBBadge color="primary"
-                                        pill>$400,000</MDBBadge>
+                                        pill>$400</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Dining area<MDBBadge
-                                        color="primary" pill>$20</MDBBadge>
+                                        color="primary" pill>$200</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Restrooms<MDBBadge color="primary"
                                         pill>$500</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Window care<MDBBadge color="primary"
-                                        pill>$10,000</MDBBadge>
+                                        pill>$100</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                 </MDBListGroup>
                             </MDBContainer>
                         </MDBCollapse>
@@ -324,17 +332,21 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                             <MDBContainer>
                                 <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px' }}>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Basketball Court Care<MDBBadge color="primary"
-                                        pill>$400,000</MDBBadge>
+                                        pill>$400</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Concessions cleaning<MDBBadge
-                                        color="primary" pill>$20</MDBBadge>
+                                        color="primary" pill>$200</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Large restroom cleaning<MDBBadge color="primary"
                                         pill>$500</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Bleacher cleanup<MDBBadge color="primary"
-                                        pill>$10,000</MDBBadge>
+                                        pill>$100</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                 </MDBListGroup>
                             </MDBContainer>
                         </MDBCollapse>
@@ -351,12 +363,17 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                         <MDBCollapse id="basicCollapse3" isOpen={this.state.collapseID} style={{ backgroundImage: `url(${Medical})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
                             <MDBContainer>
                                 <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px' }}>
+                                <br></br>
+                                <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Treatment room cleaning<MDBBadge color="primary"
-                                        pill>$400,000</MDBBadge>
+                                        pill>$400</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Disinfecting services<MDBBadge
-                                        color="primary" pill>$20</MDBBadge>
+                                        color="primary" pill>$200</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
+                                    <br></br>
                                 </MDBListGroup>
                             </MDBContainer>
                         </MDBCollapse>
@@ -373,24 +390,27 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                         <MDBCollapse id="basicCollapse4" isOpen={this.state.collapseID} style={{ backgroundImage: `url(${Facilities})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
                             <MDBContainer>
                                 <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px' }}>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Cleaning Chemical procurement & storage<MDBBadge color="primary"
-                                        pill>$400,000</MDBBadge>
+                                        pill>$400</MDBBadge>
                                     </MDBListGroupItem>
+                                    
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Snow removal management<MDBBadge
-                                        color="primary" pill>$20</MDBBadge>
+                                        color="primary" pill>$200</MDBBadge>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Landscaping management<MDBBadge color="primary"
                                         pill>$500</MDBBadge>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Facility cleaning<MDBBadge color="primary"
-                                        pill>$10,000</MDBBadge>
+                                        pill>$100</MDBBadge>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Off site storage/daily delivery service<MDBBadge color="primary"
-                                        pill>$10,000</MDBBadge>
+                                        pill>$100</MDBBadge>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">RFP management<MDBBadge color="primary"
-                                        pill>$10,000</MDBBadge>
+                                        pill>$100</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                 </MDBListGroup>
                             </MDBContainer>
                         </MDBCollapse>
@@ -407,12 +427,18 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                         <MDBCollapse id="basicCollapse5" isOpen={this.state.collapseID} style={{ backgroundImage: `url(${Groceries})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
                             <MDBContainer>
                                 <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px' }}>
+                                <br></br>
+                                <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Dairy section<MDBBadge color="primary"
-                                        pill>$400,000</MDBBadge>
+                                        pill>$400</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Frozen food section<MDBBadge
-                                        color="primary" pill>$20</MDBBadge>
+                                        color="primary" pill>$200</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
+                                    <br></br>
                                 </MDBListGroup>
                             </MDBContainer>
                         </MDBCollapse>
@@ -426,18 +452,22 @@ class ServicesPage extends React.Component <ServiceProps, MyState> {
                             >Offices</h3>
                         
                         </div>
-                        <MDBCollapse id="basicCollapse6" isOpen={this.state.collapseID} style={{ backgroundImage: `url(${Offices})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
+                        <MDBCollapse id="basicCollapse6" isOpen={this.state.collapseID} style={{ backgroundImage: `url(${Offices})`, backgroundPosition: 'center', backgroundSize: 'auto' }}>
                             <MDBContainer>
-                                <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px' }}>
+                                <MDBListGroup style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '5px', fontSize: '25px' }}>
+                                <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Sanitization<MDBBadge color="primary"
-                                        pill>$400,000</MDBBadge>
+                                        pill>$400</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Floor cleaning<MDBBadge
-                                        color="primary" pill>$20</MDBBadge>
+                                        color="primary" pill>$200</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                     <MDBListGroupItem style={listItemStyle} className="d-flex justify-content-between align-items-center">Restrooms<MDBBadge color="primary"
                                         pill>$500</MDBBadge>
                                     </MDBListGroupItem>
+                                    <br></br>
                                 </MDBListGroup>
                             </MDBContainer>
                         </MDBCollapse>
